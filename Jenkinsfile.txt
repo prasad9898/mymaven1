@@ -78,7 +78,16 @@ pipeline {
                 }
             }
         }
-
+stage ('deploy'){
+   steps {
+	script {
+       bat ''' D:\Laptop\Software\curl-7.68.0-win64-mingw\bin\curl  http://localhost:8081/repository/sampleazpipeline/com/javatpoint/Cube/2/Cube-2.war -o D:\Laptop\Software\Tomcat\apache-tomcat-8.5.51\webapps\\Cube-2.war'''
+	}
+	}
+	}
+	}
+	}
+	}
 
     }
 }
